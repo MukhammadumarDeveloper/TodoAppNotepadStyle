@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles.css";
+import ToDoItem from "./ToDoItem";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -29,7 +30,7 @@ export default function App() {
       <div>
         <ul>
           {list.map((elem) => {
-            return <li>{elem}</li>;
+            return <ToDoItem text={elem} />;
           })}
         </ul>
       </div>
